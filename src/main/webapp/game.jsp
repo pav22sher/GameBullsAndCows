@@ -42,7 +42,7 @@
         </c:if>
 
         <br/><br/>
-        <a href="logout">Выйти</a>
+        <a href="logout">Выйти из системы</a>
     </div>
 </div>
 <script>

@@ -29,13 +29,13 @@ public class RegisterServlet extends HttpServlet {
 
         if(dao.getUserByName(name)==null){
             dao.save(new User(name,password));
-            req.setAttribute("registrationStatus", "Вы успешно зарегистрировались!");
+            req.setAttribute("loginStatus", "Вы успешно зарегистрировались! Теперь войдите в систму!");
+            getServletContext().getRequestDispatcher("/login.jsp").forward(req, resp);
         }
         else{
             req.setAttribute("registrationStatus", "Пользователь с таким именем уже существует!");
+            getServletContext().getRequestDispatcher("/registration.jsp").forward(req, resp);
         }
-
-        getServletContext().getRequestDispatcher("/registration.jsp").forward(req, resp);
     }
 
 }
