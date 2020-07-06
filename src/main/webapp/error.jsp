@@ -8,7 +8,7 @@
 <div align="center">
     <div id="main">
         <p>Ошибка! Что-то пошло не так!</p>
-        <a href="login.jsp">Вернутся</a>
+        <a href=${pageContext.request.contextPath}>Вернутся</a>
     </div>
 </div>
 </body>

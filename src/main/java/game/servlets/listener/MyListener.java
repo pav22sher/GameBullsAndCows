@@ -21,9 +21,9 @@ public class MyListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         //data is stored in a file C:/data/test
-        emf = Persistence.createEntityManagerFactory("h2_permanent");
+        //emf = Persistence.createEntityManagerFactory("h2_permanent");
         //data is stored in temporary memory
-        //emf = Persistence.createEntityManagerFactory("h2_temporary");
+        emf = Persistence.createEntityManagerFactory("h2_temporary");
         em = emf.createEntityManager();
         UserDao dao=new UserDao(em);
         servletContextEvent.getServletContext().setAttribute("dao",dao);
