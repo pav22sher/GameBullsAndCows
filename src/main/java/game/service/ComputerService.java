@@ -37,7 +37,7 @@ public class ComputerService {
                 k++;
             }
         }
-        return b+"B"+k+"K";
+        return b+"Б"+k+"К";
     }
     /**
      * @param inputNumber - the number which user entered
@@ -47,7 +47,9 @@ public class ComputerService {
         if(inputNumber.length()!=4) return false;
         for(int i=0;i<4;i++){
             char cur=inputNumber.charAt(i);
-            if(inputNumber.indexOf(cur) != inputNumber.lastIndexOf(cur)){
+
+            if(!Character.isDigit(cur) ||
+                    inputNumber.indexOf(cur) != inputNumber.lastIndexOf(cur)){
                 return false;
             }
         }

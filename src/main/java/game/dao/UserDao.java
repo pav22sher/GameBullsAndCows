@@ -68,7 +68,7 @@ public class UserDao {
         User user = em.find(User.class, name);
         String compResponse = ComputerService.checkNumber(inputNumber,user.getNumber());
         user.getAttempts().add(inputNumber+" - "+compResponse);
-        return !compResponse.equals("4B0K");
+        return !compResponse.equals("4Б0К");
     }
     /**
      * @param name - user name
