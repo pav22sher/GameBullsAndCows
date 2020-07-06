@@ -8,6 +8,7 @@
 <body>
 <div align="center">
     <div id="main">
+        <h2>Вы вошли в систему под именем : ${name}!</h2>
         <p>
             ${gameStatus}
         </p>

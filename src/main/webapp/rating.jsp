@@ -8,6 +8,7 @@
 <body>
 <div align="center">
     <div id="main">
+        <h2>Вы вошли в систему под именем : ${name}!</h2>
         <a href="game.jsp">Играть</a>
         <c:if test="${users.size()>0}">
             <h3>Рейтинг:</h3>
